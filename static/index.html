@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CS Case Demo — UA-first</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>CS Case Demo <span class="badge">UA-first · fake money</span></h1>
+    <p>5 static cases in UAH · deterministic provably-fair rolls · no Steam, no payments yet.</p>
+    <p class="commit">Server commitment: <code id="commitment">…</code></p>
+  </header>
+  <main>
+    <section id="cases" class="grid" aria-label="Available cases" aria-live="polite"></section>
+    <section class="panel">
+      <h2>Open</h2>
+      <label>Client seed <input id="seed" value="demo" maxlength="64" /></label>
+      <button id="openBtn" disabled>Select a case first</button>
+      <div id="result" class="result" role="status" aria-live="assertive"></div>
+    </section>
+    <section class="panel">
+      <h2>Verify a roll</h2>
+      <p>Paste the revealed <code>demo_server_seed</code> to re-derive any roll.</p>
+      <label>Server seed <input id="vSeed" placeholder="demo-seed-change-me" /></label>
+      <label>Nonce <input id="vNonce" type="number" value="0" min="0" /></label>
+      <button id="verifyBtn">Verify</button>
+      <div id="verifyOut" class="result" role="status" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer>
+    <p>Case-opening demo · docs in <code>docs/</code> · API at <a href="/docs">/docs</a></p>
+  </footer>
+  <script src="/app.js"></script>
+</body>
+</html>
