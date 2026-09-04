@@ -8,6 +8,7 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
 from cs_case_demo.config import get_settings
+from cs_case_demo.database import create_schema
 from cs_case_demo.routers import api_router
 
 STATIC_DIR = Path(__file__).resolve().parent.parent.parent / "static"
@@ -15,7 +16,8 @@ STATIC_DIR = Path(__file__).resolve().parent.parent.parent / "static"
 
 @asynccontextmanager
 async def lifespan(_: FastAPI) -> AsyncGenerator[None]:
-    """No startup work for the demo; keeps the seam for DB pools later."""
+    """Create the local persistence schema before serving the demo."""
+    create_schema(get_settings().database_url)
     yield
 
 

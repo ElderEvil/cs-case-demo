@@ -12,6 +12,7 @@ class Settings(BaseSettings):
 
     demo_server_seed: str = "demo-seed-change-me"
     debug: bool = False
+    database_url: str = "sqlite:///./cs-case-demo.db"
 
 
 def get_settings() -> Settings:

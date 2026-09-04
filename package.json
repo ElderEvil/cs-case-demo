@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "format": "biome format --write static",
+    "format:check": "biome format static"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.7"
+  }
+}

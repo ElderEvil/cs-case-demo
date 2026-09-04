@@ -3,6 +3,7 @@
 from fastapi import APIRouter, HTTPException, status
 
 from cs_case_demo.config import get_settings
+from cs_case_demo.database import record_roll
 from cs_case_demo.schemas import CaseOut, OpenRequest, OpenResult
 from cs_case_demo.services import cases as cases_service
 from cs_case_demo.services.cases import CaseNotFoundError
@@ -30,6 +31,8 @@ def open_case(payload: OpenRequest) -> OpenResult:
     """Open a case with a deterministic fair roll (demo nonce, no money/Steam)."""
     settings = get_settings()
     try:
-        return cases_service.open_case(payload, server_seed=settings.demo_server_seed)
+        result = cases_service.open_case(payload, server_seed=settings.demo_server_seed)
     except CaseNotFoundError as exc:
         raise HTTPException(status.HTTP_404_NOT_FOUND, f"Unknown case: {payload.case_id}") from exc
+    record_roll(settings.database_url, payload, result)
+    return result

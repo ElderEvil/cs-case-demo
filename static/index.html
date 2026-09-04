@@ -1,37 +1,11 @@
 <!doctype html>
-<html lang="uk">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CS Case Demo — UA-first</title>
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
-  <header>
-    <h1>CS Case Demo <span class="badge">UA-first · fake money</span></h1>
-    <p>5 static cases in UAH · deterministic provably-fair rolls · no Steam, no payments yet.</p>
-    <p class="commit">Server commitment: <code id="commitment">…</code></p>
-  </header>
-  <main>
-    <section id="cases" class="grid" aria-label="Available cases" aria-live="polite"></section>
-    <section class="panel">
-      <h2>Open</h2>
-      <label>Client seed <input id="seed" value="demo" maxlength="64" /></label>
-      <button id="openBtn" disabled>Select a case first</button>
-      <div id="result" class="result" role="status" aria-live="assertive"></div>
-    </section>
-    <section class="panel">
-      <h2>Verify a roll</h2>
-      <p>Paste the revealed <code>demo_server_seed</code> to re-derive any roll.</p>
-      <label>Server seed <input id="vSeed" placeholder="demo-seed-change-me" /></label>
-      <label>Nonce <input id="vNonce" type="number" value="0" min="0" /></label>
-      <button id="verifyBtn">Verify</button>
-      <div id="verifyOut" class="result" role="status" aria-live="polite"></div>
-    </section>
-  </main>
-  <footer>
-    <p>Case-opening demo · docs in <code>docs/</code> · API at <a href="/docs">/docs</a></p>
-  </footer>
-  <script src="/app.js"></script>
-</body>
-</html>
+<html lang="uk"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OBSIDIAN — Case opening demo</title><meta name="description" content="A visual CS-inspired case-opening prototype."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css"></head>
+<body><div class="grain" aria-hidden="true"></div><header class="topbar"><a class="brand" href="#top"><span class="brand-mark">O</span>OBSIDIAN</a><nav><a class="active" href="#cases">Cases</a><a href="#inventory">Inventory</a><a href="#fairness">Fair play</a></nav><div class="account"><span class="online-dot"></span><span class="balance">10 000 <small>₴</small></span><button class="avatar">A</button></div></header>
+<main id="top"><section class="hero"><div class="hero-copy"><p class="eyebrow"><span></span>UA-first case experience</p><h1>Open the<br><em>unexpected.</em></h1><p class="hero-text">A cinematic case-opening prototype built around clear odds, memorable drops, and a transparent roll.</p><div class="hero-actions"><a class="button primary" href="#cases">Explore cases <b>↓</b></a><button class="button quiet" id="fairBtn">How fair play works <b>↗</b></button></div><div class="hero-stats"><div><strong>5</strong><span>curated cases</span></div><div><strong>100%</strong><span>visible odds</span></div><div><strong>&lt; 1 sec</strong><span>demo reveal</span></div></div></div><div class="hero-art" aria-hidden="true"><img src="/assets/hero-case.png" alt=""><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div></div><div class="scroll-note">SCROLL TO EXPLORE <i></i></div></section>
+<section class="drops-bar"><p><span class="pulse"></span>LIVE DROPS</p><div class="drops-track"><span>nova_ua <b>unboxed</b> ★ Butterfly Knife <i>just now</i></span><span>marta <b>unboxed</b> AWP | Asiimov <i>2m ago</i></span><span>artem <b>unboxed</b> AK-47 | Bloodsport <i>4m ago</i></span><span>kyivghost <b>unboxed</b> ★ Sport Gloves <i>6m ago</i></span></div></section>
+<section class="catalogue" id="cases"><div class="section-heading"><div><p class="eyebrow"><span></span>curated drops</p><h2>Choose your <em>chance.</em></h2></div><div class="filters"><button class="filter selected">All cases</button><button class="filter">Popular</button><button class="filter">Premium</button></div></div><div class="case-grid" id="casesGrid" aria-live="polite"></div></section>
+<section class="inventory" id="inventory"><div><p class="eyebrow"><span></span>your collection</p><h2>Recent <em>unboxes.</em></h2><p class="inventory-copy">Your latest drops stay here. The demo keeps this collection local, so the focus stays on the feeling of the reveal.</p><button class="button primary" id="showCases">Open another case <b>→</b></button></div><div class="inventory-stack" id="inventoryStack"><div class="empty-inventory">Your next drop<br>is waiting.</div></div></section>
+<section class="fairness" id="fairness"><div><p class="eyebrow"><span></span>transparent by design</p><h2>A roll you can <em>verify.</em></h2><p>Every demo result is derived from a committed server seed, your seed, and a nonce. This prototype uses a browser nonce, not a production session system.</p></div><div class="fair-card"><div class="fair-step"><span>01</span><p>Server commits a hash</p><code id="commitment">Loading…</code></div><div class="fair-step"><span>02</span><p>Your seed + nonce create a deterministic roll</p></div><button class="button quiet" id="verifyBtn">Verify a roll <b>↗</b></button></div></section></main>
+<footer><a class="brand" href="#top"><span class="brand-mark">O</span>OBSIDIAN</a><p>Visual prototype · fake money · no Steam, deposits, or withdrawals.</p><a href="/docs">API docs ↗</a></footer>
+<dialog id="openDialog" class="open-dialog"><button class="close" id="closeOpen">×</button><div class="open-top"><span id="openingCase">Opening case</span><span>PROVABLY FAIR DEMO</span></div><div class="reel-window"><div class="reel-marker"></div><div class="reel" id="reel"></div></div><div id="openingStatus" class="opening-status">Synchronizing drop sequence…</div><div class="won-card" id="wonCard" hidden><p>YOU UNBOXED</p><h3 id="wonName"></h3><div><span id="wonPrice"></span><small id="wonMeta"></small></div></div><button class="button primary open-again" id="openAgain" hidden>Open again <b>↻</b></button></dialog>
+<dialog id="fairDialog" class="fair-dialog"><button class="close" id="closeFair">×</button><p class="eyebrow"><span></span>fair play</p><h2>Verify the demo roll.</h2><p>Paste the revealed demo server seed to confirm its hash matches the commitment and re-derive the roll.</p><label>Client seed <input id="seed" value="demo" maxlength="64"></label><label>Server seed <input id="vSeed" placeholder="demo-seed-change-me"></label><label>Nonce <input id="vNonce" type="number" value="0" min="0"></label><button class="button primary" id="verifyRoll">Verify roll <b>→</b></button><div class="verify-out" id="verifyOut"></div></dialog><script src="/app.js"></script></body></html>

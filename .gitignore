@@ -8,6 +8,8 @@ wheels/
 
 # Virtual environments
 .venv
+node_modules/
 .pytest_cache/
 .ruff_cache/
 .omo/run-continuation/
+cs-case-demo.db
