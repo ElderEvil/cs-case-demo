@@ -9,3 +9,6 @@ __pycache__
 docs
 tests
 .env
+parity
+.omo
+k8s
