@@ -12,4 +12,6 @@ node_modules/
 .pytest_cache/
 .ruff_cache/
 .omo/run-continuation/
+.omo/drafts/
+.omo/evidence/
 cs-case-demo.db

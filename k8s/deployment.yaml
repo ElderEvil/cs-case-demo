@@ -1,0 +1,61 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cs-case-demo
+  namespace: cs-case-demo
+  labels:
+    app: cs-case-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cs-case-demo
+  template:
+    metadata:
+      labels:
+        app: cs-case-demo
+    spec:
+      containers:
+        - name: app
+          # scripts/deploy-hetzner.sh replaces this before applying the manifest.
+          image: localhost/cs-case-demo:IMAGE_TAG
+          imagePullPolicy: Never
+          ports:
+            - name: http
+              containerPort: 8000
+          env:
+            - name: CSDEMO_DEBUG
+              value: "false"
+            - name: CSDEMO_DEMO_SERVER_SEED
+              valueFrom:
+                secretKeyRef:
+                  name: cs-case-demo-secrets
+                  key: demo-server-seed
+            - name: CSDEMO_DATABASE_URL
+              value: sqlite:////data/cs-case-demo.db
+          resources:
+            requests:
+              cpu: 50m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          readinessProbe:
+            httpGet:
+              path: /api/health
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 20
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: cs-case-demo-data
