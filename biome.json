@@ -5,7 +5,8 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "includes": ["**", "!parity/fixtures.json"]
   },
   "linter": {
     "includes": ["src/**", "tests/**", "parity/**"]
