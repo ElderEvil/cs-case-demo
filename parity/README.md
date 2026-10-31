@@ -54,3 +54,14 @@ Re-deriving these fixtures requires checking out tag `pre-elysia`, starting the
 FastAPI app with the command and environment above, and re-running the same
 capture (one random server seed will differ per run, so byte-for-byte
 reproduction of that row is only possible from the committed file).
+
+## Replay
+
+```bash
+bun run parity/replay.ts http://127.0.0.1:8000
+bun run parity/replay.ts https://cs-case-demo.evillab.tech --structural
+```
+
+Production uses `--structural` because the real server seed keeps hash equality
+unprovable, so the operator verifies response structure and item membership
+instead of exact hash values.

@@ -1,9 +1,20 @@
 # Deploying to Hetzner k3s
 
-The application deploys as one FastAPI container on the existing Hetzner k3s
+The application deploys as one Bun/Elysia container on the existing Hetzner k3s
 cluster. Traefik terminates HTTPS and routes `cs-case-demo.evillab.tech` to the
 service. SQLite roll history lives on a one-gigabyte `local-path` PVC at
 `/data/cs-case-demo.db`.
+
+The image is built from the repository `Dockerfile`: `oven/bun:1-slim`,
+production dependencies installed from `bun.lock`, and the container command
+`bun run src/index.ts`.
+
+The Python → Bun port did not change the deployment contract:
+
+- container port `8000` and the Service target port
+- the `/data` PVC mount and `CSDEMO_DATABASE_URL=sqlite:////data/cs-case-demo.db`
+- readiness and liveness probes on `/api/health`
+- Namespace, Service, Ingress, TLS, Secret, and resource requests/limits
 
 This flow intentionally does **not** need Docker Hub or GHCR:
 
@@ -55,7 +66,33 @@ It never sends the server seed from the local machine.
 ssh hetzner 'KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl -n cs-case-demo get pods,svc,ingress,pvc'
 ssh hetzner 'KUBECONFIG=/etc/rancher/k3s/k3s.yaml kubectl -n cs-case-demo logs deploy/cs-case-demo --tail=100'
 curl --fail https://cs-case-demo.evillab.tech/api/health
+bun run parity/replay.ts https://cs-case-demo.evillab.tech --structural
 ```
+
+The replay uses `--structural` against production because the real server seed
+keeps exact hash equality unprovable; it checks response structure, case order,
+item membership, the unknown-case 404 body, and `/docs`.
+
+## Rollback
+
+Each deploy tags the image with the commit hash or an explicit tag, and the
+Deployment uses `imagePullPolicy: Never`. The previous image stays in
+containerd after a rollout, so rolling back needs no rebuild or transfer:
+
+```bash
+./scripts/deploy-hetzner.sh <previous-tag>
+```
+
+List the tags available on the node with:
+
+```bash
+ssh hetzner 'sudo k3s ctr images ls | grep cs-case-demo'
+```
+
+For a source-level rollback, `pre-elysia` is the git tag of the pre-port
+baseline.
+
+## Storage and backup
 
 The PVC uses the cluster's single-node `local-path` provisioner. Back up the
 SQLite file before node or storage maintenance:

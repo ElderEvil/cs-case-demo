@@ -23,16 +23,16 @@ withdrawal traceable, secure, and operationally reliable.
 
 #### API and application structure
 
-- **FastAPI** application with a clean split between HTTP routers, business
-  services, schemas, the static catalogue, and the fairness core.
+- **Bun + Elysia** application with a clean split between HTTP routes, business
+  logic, schemas, the static catalogue, and the fairness core.
 - Public demo endpoints:
   - `GET /api/cases` — catalogue, prices, items, and weights.
   - `GET /api/cases/{case_id}` — one case.
   - `POST /api/open` — deterministic demo opening.
   - `GET /api/fair/commitment` — published server-seed fingerprint.
   - `POST /api/fair/verify` — independent roll verification.
-- Static frontend is served by the same app, so the demo has no separate
-  frontend deployment or Node build requirement.
+- Static frontend is served by the same app through `@elysiajs/static`, so the
+  demo has no separate frontend deployment or build step.
 
 #### Provably-fair roll engine
 
@@ -47,7 +47,7 @@ withdrawal traceable, secure, and operationally reliable.
 
 #### Persistence and audit trail
 
-- **SQLAlchemy 2** is installed with SQLite as the local default.
+- **`bun:sqlite`** persists roll history to SQLite, the local default.
 - Each completed demo opening creates an immutable `roll_records` audit row:
   timestamp, case, item, client seed, nonce, roll value, and server hash.
 - The database URL is configuration-driven via `CSDEMO_DATABASE_URL`; local
@@ -58,9 +58,8 @@ withdrawal traceable, secure, and operationally reliable.
 #### Quality baseline
 
 - Automated API and fairness tests cover the present core flow.
-- Ruff linting, type checking, and frontend formatting are part of the local
-  workflow.
-- Frontend formatting uses Biome through pnpm; Python dependencies use uv.
+- Biome checks and formats the codebase, and `tsc --noEmit` type checks it.
+- Dependencies are installed with `bun install`.
 
 ### Why this is the difficult part
 
@@ -126,7 +125,7 @@ technical responsibility is to ensure that the system can answer, reliably:
 
 ### Current technical boundary
 
-The existing SQLite/SQLAlchemy seam is intentionally modest. It proves the
+The existing SQLite/`bun:sqlite` seam is intentionally modest. It proves the
 data model direction and records demo rolls. It is **not** enough to claim
 production readiness. Before handling money or transferrable items, the system
 needs server-side nonce enforcement, a real ledger, migrations, durable hosted
@@ -156,16 +155,16 @@ storage, transaction boundaries, secrets management, and monitoring.
 
 #### API и структура приложения
 
-- Приложение на **FastAPI** с разделением на HTTP-роутеры, бизнес-сервисы,
-  схемы, статический каталог и ядро честного рандома.
+- Приложение на **Bun + Elysia** с разделением на HTTP-маршруты,
+  бизнес-логику, схемы, статический каталог и ядро честного рандома.
 - Публичные demo-endpoints:
   - `GET /api/cases` — каталог, цены, предметы и веса.
   - `GET /api/cases/{case_id}` — одна кейс-коллекция.
   - `POST /api/open` — детерминированное demo-открытие.
   - `GET /api/fair/commitment` — опубликованный отпечаток server seed.
   - `POST /api/fair/verify` — независимая проверка ролла.
-- Статический фронтенд раздаётся тем же приложением. Поэтому для демо не нужен
-  отдельный frontend-deploy или Node build.
+- Статический фронтенд раздаётся тем же приложением через `@elysiajs/static`.
+  Поэтому для демо не нужен отдельный frontend-deploy или шаг сборки.
 
 #### Движок Provably Fair
 
@@ -180,7 +179,8 @@ storage, transaction boundaries, secrets management, and monitoring.
 
 #### Хранение данных и аудит
 
-- Подключён **SQLAlchemy 2**; по умолчанию локально используется SQLite.
+- Подключён **`bun:sqlite`**: история роллов хранится в SQLite, локальная база
+  используется по умолчанию.
 - Каждое завершённое demo-открытие записывается в неизменяемую строку
   `roll_records`: время, кейс, предмет, client seed, nonce, значение ролла и
   server hash.
@@ -192,8 +192,9 @@ storage, transaction boundaries, secrets management, and monitoring.
 #### Базовый уровень качества
 
 - Автоматические тесты API и fair-механики покрывают текущий основной сценарий.
-- В локальном процессе есть Ruff, проверка типов и форматирование фронтенда.
-- Для фронтенда используется Biome через pnpm; для Python-зависимостей — uv.
+- В локальном процессе есть Biome и проверка типов через `tsc --noEmit`.
+- Линтинг и форматирование выполняет Biome; зависимости ставятся через
+  `bun install`.
 
 ### Почему это сложная часть
 
@@ -262,7 +263,7 @@ UI можно быстро перерисовать или собрать из �
 
 ### Текущая техническая граница
 
-Текущий слой SQLite/SQLAlchemy намеренно небольшой. Он показывает направление
+Текущий слой SQLite/`bun:sqlite` намеренно небольшой. Он показывает направление
 модели данных и сохраняет demo-роллы. Он **не** означает, что продукт готов к
 production. До работы с деньгами или передаваемыми предметами нужны серверный
 контроль nonce, настоящий ledger, миграции, надёжное hosted-хранилище,
