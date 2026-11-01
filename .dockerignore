@@ -1,0 +1,14 @@
+.git
+.venv
+node_modules
+.pytest_cache
+.ruff_cache
+__pycache__
+*.py[cod]
+*.db
+docs
+tests
+.env
+parity
+.omo
+k8s

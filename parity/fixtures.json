@@ -1,0 +1,830 @@
+{
+  "hash_vectors": [
+    {
+      "server_seed": "s",
+      "client_seed": "demo",
+      "nonce": 0,
+      "roll": 0.8618209627456963,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "demo",
+      "nonce": 1,
+      "roll": 0.9734244195278734,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "demo",
+      "nonce": 7,
+      "roll": 0.7647718822117895,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "demo",
+      "nonce": 42,
+      "roll": 0.8194088242016733,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "demo",
+      "nonce": 999,
+      "roll": 0.9675877410918474,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "c",
+      "nonce": 0,
+      "roll": 0.5978867425583303,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "c",
+      "nonce": 1,
+      "roll": 0.8596461270935833,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "c",
+      "nonce": 7,
+      "roll": 0.2869983520358801,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "c",
+      "nonce": 42,
+      "roll": 0.9579317914322019,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "c",
+      "nonce": 999,
+      "roll": 0.30270542902871966,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "тест",
+      "nonce": 0,
+      "roll": 0.2155384225770831,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "тест",
+      "nonce": 1,
+      "roll": 0.03304141107946634,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "тест",
+      "nonce": 7,
+      "roll": 0.4722339450381696,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "тест",
+      "nonce": 42,
+      "roll": 0.6311852163635194,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "s",
+      "client_seed": "тест",
+      "nonce": 999,
+      "roll": 0.49871779209934175,
+      "commitment": "043a718774c572bd8a25adbeb1bfcd5c0256ae11cecf9f9c3f925d0e52beaf89"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "demo",
+      "nonce": 0,
+      "roll": 0.46476181712932885,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "demo",
+      "nonce": 1,
+      "roll": 0.6825801327358931,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "demo",
+      "nonce": 7,
+      "roll": 0.07223090576007962,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "demo",
+      "nonce": 42,
+      "roll": 0.10302624106407166,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "demo",
+      "nonce": 999,
+      "roll": 0.6208146044518799,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "c",
+      "nonce": 0,
+      "roll": 0.31820979341864586,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "c",
+      "nonce": 1,
+      "roll": 0.4865005062893033,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "c",
+      "nonce": 7,
+      "roll": 0.3139025503769517,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "c",
+      "nonce": 42,
+      "roll": 0.2108921732287854,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "c",
+      "nonce": 999,
+      "roll": 0.8543936368077993,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "тест",
+      "nonce": 0,
+      "roll": 0.3453832804225385,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "тест",
+      "nonce": 1,
+      "roll": 0.6775578532833606,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "тест",
+      "nonce": 7,
+      "roll": 0.47634467436000705,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "тест",
+      "nonce": 42,
+      "roll": 0.7453286261297762,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "demo-seed-change-me",
+      "client_seed": "тест",
+      "nonce": 999,
+      "roll": 0.953626309055835,
+      "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "demo",
+      "nonce": 0,
+      "roll": 0.602186479838565,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "demo",
+      "nonce": 1,
+      "roll": 0.06873998907394707,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "demo",
+      "nonce": 7,
+      "roll": 0.3380989860743284,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "demo",
+      "nonce": 42,
+      "roll": 0.5808224631473422,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "demo",
+      "nonce": 999,
+      "roll": 0.3633701556827873,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "c",
+      "nonce": 0,
+      "roll": 0.5233683111146092,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "c",
+      "nonce": 1,
+      "roll": 0.3396882591769099,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "c",
+      "nonce": 7,
+      "roll": 0.08836079970933497,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "c",
+      "nonce": 42,
+      "roll": 0.1384633402340114,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "c",
+      "nonce": 999,
+      "roll": 0.3316425771918148,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "тест",
+      "nonce": 0,
+      "roll": 0.147758434060961,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "тест",
+      "nonce": 1,
+      "roll": 0.6227912013418972,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "тест",
+      "nonce": 7,
+      "roll": 0.254507354227826,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "тест",
+      "nonce": 42,
+      "roll": 0.5076719331555068,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    },
+    {
+      "server_seed": "68a313d0b4e23dd8f0c5a967154d3a9d082c65c6e850847ae76ede60874a34af",
+      "client_seed": "тест",
+      "nonce": 999,
+      "roll": 0.5774042676202953,
+      "commitment": "a07f7bce69d10bd95729b84a1e86bc260e725cb656aa0e41b5a7a55d227abb07"
+    }
+  ],
+  "api_vectors": [
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "path": "/api/health"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "status": "ok"
+        }
+      }
+    },
+    {
+      "name": "cases",
+      "request": {
+        "method": "GET",
+        "path": "/api/cases"
+      },
+      "response": {
+        "status": 200,
+        "body": [
+          {
+            "id": "recruit",
+            "name": "Recruit",
+            "price_uah": 24,
+            "items": [
+              {
+                "id": "usp-s",
+                "name": "USP-S | Steel Sentinel (BS)",
+                "price_uah": 18,
+                "weight": 60
+              },
+              {
+                "id": "glock-ca",
+                "name": "Glock-18 | Caramel Apple (MW)",
+                "price_uah": 45,
+                "weight": 25
+              },
+              {
+                "id": "ak-wg",
+                "name": "AK-47 | Wintergreen (FT)",
+                "price_uah": 120,
+                "weight": 10
+              },
+              {
+                "id": "m4a4-neo",
+                "name": "M4A4 | Neo-Noir (FT)",
+                "price_uah": 900,
+                "weight": 5
+              }
+            ]
+          },
+          {
+            "id": "vanguard",
+            "name": "Vanguard Prime",
+            "price_uah": 33,
+            "items": [
+              {
+                "id": "famas",
+                "name": "FAMAS | Commemoration (FT)",
+                "price_uah": 25,
+                "weight": 55
+              },
+              {
+                "id": "mp7",
+                "name": "MP7 | Nemesis (FT)",
+                "price_uah": 60,
+                "weight": 28
+              },
+              {
+                "id": "deagle",
+                "name": "Desert Eagle | Ocean Drive (FT)",
+                "price_uah": 260,
+                "weight": 12
+              },
+              {
+                "id": "ak-ruby",
+                "name": "AK-47 | Bloodsport (FT)",
+                "price_uah": 1400,
+                "weight": 5
+              }
+            ]
+          },
+          {
+            "id": "anime",
+            "name": "Anime: Tanjiro",
+            "price_uah": 81,
+            "items": [
+              {
+                "id": "p250",
+                "name": "P250 | Asiimov (FT)",
+                "price_uah": 70,
+                "weight": 55
+              },
+              {
+                "id": "m4a1-s",
+                "name": "M4A1-S | Player Two (FT)",
+                "price_uah": 200,
+                "weight": 28
+              },
+              {
+                "id": "awp-asi",
+                "name": "AWP | Asiimov (FT)",
+                "price_uah": 900,
+                "weight": 12
+              },
+              {
+                "id": "knife-t",
+                "name": "★ Talon Knife | Tiger Tooth (FT)",
+                "price_uah": 22000,
+                "weight": 5
+              }
+            ]
+          },
+          {
+            "id": "zeus",
+            "name": "Zeus",
+            "price_uah": 297,
+            "items": [
+              {
+                "id": "cz",
+                "name": "CZ75 | Tigris (FT)",
+                "price_uah": 220,
+                "weight": 55
+              },
+              {
+                "id": "p90",
+                "name": "P90 | Asiimov (FT)",
+                "price_uah": 550,
+                "weight": 28
+              },
+              {
+                "id": "m4a4-howl",
+                "name": "M4A4 | Howl (FT)",
+                "price_uah": 2400,
+                "weight": 12
+              },
+              {
+                "id": "gloves-s",
+                "name": "★ Sport Gloves | Superconductor (FT)",
+                "price_uah": 45000,
+                "weight": 5
+              }
+            ]
+          },
+          {
+            "id": "knife",
+            "name": "Knife Hunt",
+            "price_uah": 4413,
+            "items": [
+              {
+                "id": "kukri",
+                "name": "★ Kukri Knife | Slaughter (FT)",
+                "price_uah": 3200,
+                "weight": 60
+              },
+              {
+                "id": "bowie",
+                "name": "★ Bowie Knife | Doppler (FT)",
+                "price_uah": 8000,
+                "weight": 25
+              },
+              {
+                "id": "m9",
+                "name": "★ M9 Bayonet | Lore (FT)",
+                "price_uah": 24000,
+                "weight": 10
+              },
+              {
+                "id": "bfly",
+                "name": "★ Butterfly Knife | Fade (FN)",
+                "price_uah": 90000,
+                "weight": 5
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "case_recruit",
+      "request": {
+        "method": "GET",
+        "path": "/api/cases/recruit"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "id": "recruit",
+          "name": "Recruit",
+          "price_uah": 24,
+          "items": [
+            {
+              "id": "usp-s",
+              "name": "USP-S | Steel Sentinel (BS)",
+              "price_uah": 18,
+              "weight": 60
+            },
+            {
+              "id": "glock-ca",
+              "name": "Glock-18 | Caramel Apple (MW)",
+              "price_uah": 45,
+              "weight": 25
+            },
+            {
+              "id": "ak-wg",
+              "name": "AK-47 | Wintergreen (FT)",
+              "price_uah": 120,
+              "weight": 10
+            },
+            {
+              "id": "m4a4-neo",
+              "name": "M4A4 | Neo-Noir (FT)",
+              "price_uah": 900,
+              "weight": 5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "case_zeus",
+      "request": {
+        "method": "GET",
+        "path": "/api/cases/zeus"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "id": "zeus",
+          "name": "Zeus",
+          "price_uah": 297,
+          "items": [
+            {
+              "id": "cz",
+              "name": "CZ75 | Tigris (FT)",
+              "price_uah": 220,
+              "weight": 55
+            },
+            {
+              "id": "p90",
+              "name": "P90 | Asiimov (FT)",
+              "price_uah": 550,
+              "weight": 28
+            },
+            {
+              "id": "m4a4-howl",
+              "name": "M4A4 | Howl (FT)",
+              "price_uah": 2400,
+              "weight": 12
+            },
+            {
+              "id": "gloves-s",
+              "name": "★ Sport Gloves | Superconductor (FT)",
+              "price_uah": 45000,
+              "weight": 5
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "case_unknown",
+      "request": {
+        "method": "GET",
+        "path": "/api/cases/nope"
+      },
+      "response": {
+        "status": 404,
+        "body": {
+          "detail": "Unknown case: nope"
+        }
+      }
+    },
+    {
+      "name": "commitment",
+      "request": {
+        "method": "GET",
+        "path": "/api/fair/commitment"
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_recruit",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "client_seed": "demo",
+          "nonce": 0,
+          "case_id": "recruit"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "case_id": "recruit",
+          "item": {
+            "id": "usp-s",
+            "name": "USP-S | Steel Sentinel (BS)",
+            "price_uah": 18,
+            "weight": 60
+          },
+          "roll": 0.46476181712932885,
+          "nonce": 0,
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_vanguard",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "client_seed": "demo",
+          "nonce": 1,
+          "case_id": "vanguard"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "case_id": "vanguard",
+          "item": {
+            "id": "mp7",
+            "name": "MP7 | Nemesis (FT)",
+            "price_uah": 60,
+            "weight": 28
+          },
+          "roll": 0.6825801327358931,
+          "nonce": 1,
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_anime",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "client_seed": "demo",
+          "nonce": 2,
+          "case_id": "anime"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "case_id": "anime",
+          "item": {
+            "id": "m4a1-s",
+            "name": "M4A1-S | Player Two (FT)",
+            "price_uah": 200,
+            "weight": 28
+          },
+          "roll": 0.6125357267446816,
+          "nonce": 2,
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_zeus",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "client_seed": "demo",
+          "nonce": 3,
+          "case_id": "zeus"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "case_id": "zeus",
+          "item": {
+            "id": "cz",
+            "name": "CZ75 | Tigris (FT)",
+            "price_uah": 220,
+            "weight": 55
+          },
+          "roll": 0.3840069107245654,
+          "nonce": 3,
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_knife",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "client_seed": "demo",
+          "nonce": 4,
+          "case_id": "knife"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "case_id": "knife",
+          "item": {
+            "id": "bowie",
+            "name": "★ Bowie Knife | Doppler (FT)",
+            "price_uah": 8000,
+            "weight": 25
+          },
+          "roll": 0.6637553283944726,
+          "nonce": 4,
+          "server_hash": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      }
+    },
+    {
+      "name": "open_unknown_case",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "case_id": "nope"
+        }
+      },
+      "response": {
+        "status": 404,
+        "body": {
+          "detail": "Unknown case: nope"
+        }
+      }
+    },
+    {
+      "name": "open_validation_error",
+      "request": {
+        "method": "POST",
+        "path": "/api/open",
+        "body": {
+          "case_id": "recruit",
+          "client_seed": ""
+        }
+      },
+      "response": {
+        "status": 422,
+        "body": {
+          "detail": [
+            {
+              "type": "string_too_short",
+              "loc": [
+                "body",
+                "client_seed"
+              ],
+              "msg": "String should have at least 1 character",
+              "input": "",
+              "ctx": {
+                "min_length": 1
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "verify_valid",
+      "request": {
+        "method": "POST",
+        "path": "/api/fair/verify",
+        "body": {
+          "server_seed": "demo-seed-change-me",
+          "client_seed": "demo",
+          "nonce": 0,
+          "commitment": "a9201f9d7531313a044b4acb183fbd85e92853e94d812c82795080b363c11185"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "commitment_valid": true,
+          "roll": 0.46476181712932885
+        }
+      }
+    },
+    {
+      "name": "verify_zero_commitment",
+      "request": {
+        "method": "POST",
+        "path": "/api/fair/verify",
+        "body": {
+          "server_seed": "demo-seed-change-me",
+          "client_seed": "demo",
+          "nonce": 0,
+          "commitment": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "response": {
+        "status": 200,
+        "body": {
+          "commitment_valid": false,
+          "roll": 0.46476181712932885
+        }
+      }
+    }
+  ]
+}

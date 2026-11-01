@@ -1,0 +1,14 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.7/schema.json",
+  "files": {
+    "includes": ["static/**", "src/**", "tests/**", "parity/**"]
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "includes": ["**", "!parity/fixtures.json"]
+  },
+  "linter": {
+    "includes": ["src/**", "tests/**", "parity/**"]
+  }
+}
